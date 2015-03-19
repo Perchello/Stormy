@@ -1,10 +1,12 @@
-package perchello.stormy;
+package perchello.stormy.UI;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import perchello.stormy.R;
 
 /**
  * Created by Perchello on 15/03/2015.
