@@ -39,6 +39,7 @@ import perchello.stormy.weather.Hour;
 public class MainActivity extends ActionBarActivity {
     public static  final  String TAG = MainActivity.class.getSimpleName();
     public static final String DAILY_FORECAST = "DAILY_FORECAST";
+    public static final String HOURLY_FORECAST = "HOURLY_FORECAST";
     private Forecast mForecast;
     @InjectView(R.id.timeLabel) TextView mTimeLabel;
     @InjectView(R.id.temperatureLabel) TextView mTemperatureLabel;
@@ -238,4 +239,11 @@ public class MainActivity extends ActionBarActivity {
         intent.putExtra(DAILY_FORECAST, mForecast.getDailyForecast());
         startActivity(intent);
     }
+    @OnClick (R.id.hourlyButton)
+    public void startHourlyActiviry (View view){
+        Intent intent = new Intent(this, HourlyForecastActivity.class);
+        intent.putExtra(HOURLY_FORECAST, mForecast.getHourlyForecast());
+        startActivity(intent);
+    }
+
 }
